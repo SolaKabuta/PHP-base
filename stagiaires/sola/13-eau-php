@@ -19,17 +19,13 @@
           L'eau est gazeuse à 105°
     </p>  
     <?php
-    $a = 0;
+    $a = mt_rand(-100,200);
     if($a <= 0) {
-        echo "L'état de l'eau est solide";
-    }elseif($a >=1 && $a <=99) {
-        echo "L'état de l'eau est gazeux";
-    }elseif ($a < -7) {
-        echo "L'eau est solide";
-    }elseif ($a == 33) {
-        echo "L'eau est liquide";
-    }elseif ($a >= 105) {
-        echo "L'est est gazeuse";
+        echo "L'eau est solide à ".$a."°";
+    }elseif($a <=99) {
+        echo "L'état de l'eau est solide à {$a}°";
+    }else {
+        echo "L'eau est est gazeuse";
     }
     ?>
 </body>
